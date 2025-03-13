@@ -18,10 +18,10 @@ const Login: React.FC<LoginProps> = ({ onLoginSuccess }) => {
   };
 
   return (
-    <ImageBackground source={require('./assets/images/background.jpeg')} style={styles.background}>
+    <ImageBackground source={require('../assets/images/background.jpeg')} style={styles.background}>
       <View style={styles.container}>
-        <Image source={require('./assets/images/logo.png')} style={styles.image1} />
-        <Image source={require('./assets/images/logo2.jpg')} style={styles.image2} />
+        <Image source={require('../assets/images/logo.png')} style={styles.image1} />
+        <Image source={require('../assets/images/logo2.jpg')} style={styles.image2} />
         <Text style={styles.title}>Bienvenido</Text>
         <TextInput
           style={styles.input}
