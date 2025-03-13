@@ -22,10 +22,17 @@ const Menu = () => {
     }).start();
   };
 
-  // Función para cambiar de pantalla
+  
   const cambiarPantalla = (pantalla: string) => {
-    setPantallaActual(pantalla);
-    setMenuVisible(false);
+    setPantallaActual(pantalla); // Cambia la pantalla actual
+    setMenuVisible(false); // Oculta el menú
+  
+    // Mueve el menú fuera de la pantalla (izquierda)
+    Animated.timing(menuAnim, {
+      toValue: -250,
+      duration: 300,
+      useNativeDriver: true,
+    }).start();
   };
 
   // Renderizar la pantalla seleccionada
@@ -75,32 +82,33 @@ const styles = StyleSheet.create({
     top: 10,
     left: 10,
     padding: 10,
-    backgroundColor: '#007bff',
+    backgroundColor: '#2c2b70',
     borderRadius: 5,
     zIndex: 1,
   },
   buttonText: {
-    color: '#fff',
+    color: '#c6d436',
     fontSize: 16,
   },
   menu: {
     position: 'absolute',
-    top: 50,
+    top: 60,
     left: 0,
-    width: 250,
+    width: 170,
     backgroundColor: '#2c2b70',
     borderRadius: 5,
     height: '100%',
-    paddingTop: 20,
+    paddingTop: 0,
+    zIndex: 10,
   },
   menuItem: {
     padding: 15,
     borderBottomWidth: 1,
-    borderBottomColor: '#ddd',
+    borderBottomColor: '#c6d436',
   },
   menuItemText: {
     fontSize: 16,
-    color: '#fff',
+    color: '#c6d436',
   },
   content: {
     flex: 1,
