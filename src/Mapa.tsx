@@ -3,11 +3,14 @@ import { View, Text, StyleSheet } from 'react-native';
 
 const Mapa = () => {
   return (
+    
     <View style={styles.container}>
       <Text style={styles.text}>🗺️ Pantalla del Mapa</Text>
     </View>
   );
 };
+
+
 
 const styles = StyleSheet.create({
   container: {
@@ -19,6 +22,7 @@ const styles = StyleSheet.create({
   text: {
     fontSize: 20,
     fontWeight: 'bold',
+    color: '#333',
   },
 });
 

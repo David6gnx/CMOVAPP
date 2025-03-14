@@ -1,19 +1,23 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, Button, Image, ImageBackground, StyleSheet, Alert } from 'react-native';
+import { useUser } from './context/UserContext'; // Importar el hook del contexto
 
 interface LoginProps {
   onLoginSuccess: () => void;
 }
 
 const Login: React.FC<LoginProps> = ({ onLoginSuccess }) => {
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
+  const { setUsername, setPassword } = useUser(); // Usar el contexto
+  const [inputUsername, setInputUsername] = useState('');
+  const [inputPassword, setInputPassword] = useState('');
 
   const handleLogin = () => {
-    if (username === 'admin' && password === '1234') {
+    if (inputUsername === 'Admin' && inputPassword === '1234') {
+      setUsername(inputUsername); // Guardar el username en el contexto
+      setPassword(inputPassword); // Guardar la contraseña en el contexto
       onLoginSuccess();
     } else {
-      Alert.alert('Mensaje', 'Usuario o contraseña incorrectos'); // Aquí está la corrección
+      Alert.alert('Mensaje', 'Usuario o contraseña incorrectos');
     }
   };
 
@@ -27,16 +31,16 @@ const Login: React.FC<LoginProps> = ({ onLoginSuccess }) => {
           style={styles.input}
           placeholder="ID"
           placeholderTextColor="#ffffff"
-          value={username}
-          onChangeText={setUsername}
+          value={inputUsername}
+          onChangeText={setInputUsername}
         />
         <TextInput
           style={styles.input}
           placeholder="Contraseña"
           placeholderTextColor="#ffffff"
           secureTextEntry
-          value={password}
-          onChangeText={setPassword}
+          value={inputPassword}
+          onChangeText={setInputPassword}
         />
         <Button title="Iniciar Sesión" onPress={handleLogin} />
         <Text style={styles.author}>Universidad Tecnológica de Aguascalientes</Text>

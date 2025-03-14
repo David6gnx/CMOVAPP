@@ -82,12 +82,12 @@ const styles = StyleSheet.create({
     top: 10,
     left: 10,
     padding: 10,
-    backgroundColor: '#2c2b70',
+    backgroundColor: '#c6d436',
     borderRadius: 5,
     zIndex: 1,
   },
   buttonText: {
-    color: '#c6d436',
+    color: '#fff',
     fontSize: 16,
   },
   menu: {
@@ -119,6 +119,7 @@ const styles = StyleSheet.create({
   contentText: {
     fontSize: 20,
     fontWeight: 'bold',
+    color: '#333',
   },
 });
 
