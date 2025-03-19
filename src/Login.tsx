@@ -12,7 +12,7 @@ const Login: React.FC<LoginProps> = ({ onLoginSuccess }) => {
   const [inputPassword, setInputPassword] = useState('');
 
   const handleLogin = () => {
-    if (inputUsername === 'Admin' && inputPassword === '1234') {
+    if (inputUsername === 'cm253001' && inputPassword === '1234') {
       setUsername(inputUsername); // Guardar el username en el contexto
       setPassword(inputPassword); // Guardar la contraseña en el contexto
       onLoginSuccess();

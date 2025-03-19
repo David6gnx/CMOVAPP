@@ -102,8 +102,8 @@ const styles = StyleSheet.create({
     zIndex: 10,
   },
   menuItem: {
-    padding: 15,
-    borderBottomWidth: 1,
+    padding: 25,
+    borderBottomWidth: 6,
     borderBottomColor: '#c6d436',
   },
   menuItemText: {

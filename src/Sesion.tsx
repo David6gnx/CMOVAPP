@@ -76,11 +76,10 @@ const styles = StyleSheet.create({
   },
   background: {
     position: 'absolute',
-    top: -50,
-    left: -85,
-    right: 0,
-    width: '106%',
-    height: '104.5%',
+    bottom: 13,
+    left: -115,
+    width: '109%',
+    height: '104%',
     resizeMode: 'cover',
   },
   header: {

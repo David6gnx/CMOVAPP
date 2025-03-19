@@ -4,7 +4,7 @@ import { View, Text, StyleSheet } from 'react-native';
 const Noticias = () => {
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>👤 Pantalla de Mapa</Text>
+      <Text style={styles.text}>👤 Pantalla de Noticias</Text>
     </View>
   );
 };
