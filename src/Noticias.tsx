@@ -1,15 +1,29 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, Image, ImageBackground, StyleSheet, TouchableOpacity, Alert } from 'react-native';
 
 const Noticias = () => {
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>👤 Pantalla de Noticias</Text>
+      <ImageBackground 
+              source={require('../assets/images/background2.jpeg')}
+              style={styles.background}
+            />
+      <Text style={styles.text}>🗺️ Pantalla de Noticias</Text>
     </View>
+    
   );
 };
 
+
 const styles = StyleSheet.create({
+  background: {
+    position: 'absolute',
+    bottom: 13,
+    left: -149,
+    width: '110%',
+    height: '104%',
+    resizeMode: 'cover',
+  },
   container: {
     flex: 1,
     justifyContent: 'center',

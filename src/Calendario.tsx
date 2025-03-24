@@ -16,11 +16,10 @@ const Calendario = () => {
 const styles = StyleSheet.create({
   background: {
     position: 'absolute',
-    top: -40,
-    left: -109,
-    right: 0,
-    width: '106%',
-    height: '104.5%',
+    bottom: 13,
+    left: -138,
+    width: '110%',
+    height: '104%',
     resizeMode: 'cover',
   },
   container: {

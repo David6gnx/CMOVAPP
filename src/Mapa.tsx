@@ -18,11 +18,10 @@ const Mapa = () => {
 const styles = StyleSheet.create({
   background: {
     position: 'absolute',
-    top: -40,
-    left: -129,
-    right: 0,
-    width: '106%',
-    height: '104.5%',
+    bottom: 13,
+    left: -158,
+    width: '110%',
+    height: '104%',
     resizeMode: 'cover',
   },
   container: {

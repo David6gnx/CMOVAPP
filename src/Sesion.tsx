@@ -38,11 +38,7 @@ const Menu = () => {
 
       {/* Header con logo */}
       <View style={styles.header}>
-        <Image 
-          source={require('../assets/images/logo3.jpeg')}
-          style={styles.logo}
-          resizeMode="contain"
-        />
+      <Image source={require('../assets/images/logo3.jpeg')} style={styles.logo} />
       </View>
 
       {/* Contenido del menú */}
@@ -82,6 +78,7 @@ const styles = StyleSheet.create({
     height: '104%',
     resizeMode: 'cover',
   },
+  
   header: {
     top: -20,
     right: -60,
@@ -91,10 +88,18 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     marginTop: 20,
   },
+  logoContainer: {
+    flex: 1, // Ocupa todo el espacio disponible
+    justifyContent: 'center', // Centra verticalmente
+    alignItems: 'center', // Centra horizontalmente
+},
   logo: {
-    width: 150,
-    height: 80,
-  },
+    top: -8,
+    width: 110,
+    height: 100,
+    resizeMode: 'contain', // Para que la imagen no se deforme
+    left: 20,
+},
   content: {
     flex: 1,
     justifyContent: 'center',
