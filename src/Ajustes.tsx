@@ -9,7 +9,7 @@ const Ajustes = () => {
               style={styles.background}
             />
       <Text style={styles.text}>🗺️ Pantalla de Noticias</Text>
-    </View>
+    </View> 
     
   );
 };
